@@ -19,3 +19,4 @@ dftrain.head()
 y_train = dftrain.pop('survived')
 y_eval = dftrain.pop('survived')
 
+print(dftrain.head())
