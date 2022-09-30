@@ -55,7 +55,7 @@ print('\nTest set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
 
 def input_fn(features, batch_size=256):
     # Convert the inputs to a Dataset without labels
-    return tf.data.Dataset.from_tensor_slices(dict(features)).batch_size
+    return tf.data.Dataset.from_tensor_slices(dict(features)).batch(batch_size)
 
 features = ['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth']
 predict = {}
